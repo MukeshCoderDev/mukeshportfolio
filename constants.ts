@@ -19,27 +19,35 @@ export const PROJECTS: Project[] = [
     {
         title: 'NoCensor TV',
         subtitle: 'Decentralized Adult Content Platform',
-        description: 'The first truly decentralized adult content platform built on Ethereum/Polygon blockchain with Helia for browser-native IPFS integration.',
+        description: 'The first truly decentralized adult content platform built on Ethereum/Polygon with Helia for browser-native IPFS integration, ensuring censorship resistance.',
         tech: ['Ethereum', 'IPFS', 'Solidity', 'React', 'Polygon', 'Helia'],
         githubUrl: 'https://github.com/MukeshCoderDev/nocensor-tv',
-        liveUrl: '#'
+        liveUrl: null
     },
     {
-        title: 'DeFi Shield Protocol',
-        subtitle: 'AI-Powered DeFi Insurance',
-        description: 'Advanced risk assessment platform with real-time threat detection, predictive analytics, and parametric insurance for DeFi.',
-        tech: ['AI/ML', 'Python', 'Smart Contracts', 'Chainlink', 'React', 'TensorFlow'],
-        githubUrl: 'https://github.com/MukeshCoderDev/defi-shield-protocol',
-        liveUrl: '#'
+        title: 'Abacus NFT Perp Trading',
+        subtitle: 'NFT Perpetual Futures Trading Platform',
+        description: 'A decentralized platform for trading NFT perpetual futures, allowing users to hedge or speculate on the floor price of NFT collections with leverage.',
+        tech: ['React', 'Solidity', 'Ethers.js', 'Chainlink', 'The Graph', 'Hardhat'],
+        githubUrl: 'https://github.com/MukeshCoderDev/abacus-nft-perp-trading',
+        liveUrl: 'https://abacus-nft-perp-trading.netlify.app'
     },
     {
-        title: 'Polygon NFT Marketplace',
-        subtitle: 'Multi-Chain NFT Platform',
-        description: 'Full-featured NFT marketplace with lazy minting, multi-chain support, and royalty management.',
-        tech: ['ERC-721', 'Next.js', 'Web3.js', 'IPFS', 'TypeScript', 'Polygon'],
-        githubUrl: 'https://github.com/MukeshCoderDev/polygon-nft-marketplace',
-        liveUrl: '#'
+        title: 'ArbitraPro',
+        subtitle: 'DeFi Flash Loan Arbitrage DApp',
+        description: 'An automated DApp that leverages flash loans from Aave and Uniswap to execute atomic arbitrage strategies across various decentralized exchanges for profit.',
+        tech: ['Solidity', 'Hardhat', 'Ethers.js', 'Aave', 'Uniswap', 'Node.js'],
+        githubUrl: 'https://github.com/MukeshCoderDev/ArbitraPro---DeFi-Flash-Loan-Arbitrage-DApp',
+        liveUrl: 'https://mukeshcoderdev.github.io/ArbitraPro---DeFi-Flash-Loan-Arbitrage-DApp/'
     },
+    {
+        title: 'YieldMatrix',
+        subtitle: 'DeFi Yield Aggregator Dashboard',
+        description: 'A comprehensive dashboard aggregating data from top DeFi protocols, enabling users to track, manage, and optimize their yield farming and staking positions.',
+        tech: ['React', 'The Graph', 'Ethers.js', 'Chart.js', 'DeFi SDKs', 'Next.js'],
+        githubUrl: 'https://github.com/MukeshCoderDev/yieldmatrix-defi-dashboard',
+        liveUrl: 'https://mukeshcoderdev.github.io/yieldmatrix-defi-dashboard/'
+    }
 ];
 
 export const GITHUB_STATS: Stat[] = [
