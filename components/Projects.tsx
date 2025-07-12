@@ -13,22 +13,20 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
             <div className="p-8">
                 <p className="text-slate-300 mb-6 min-h-[84px]">{project.description}</p>
                 <div className="flex flex-wrap gap-3 mb-8">
-                    {project.tech.map(tech => (
+                    {project.techTags.map(tech => (
                         <span key={tech} className="bg-[#00ff9d]/10 text-[#00ff9d] text-sm font-['Share_Tech_Mono'] px-4 py-1 rounded-full border border-[#00ff9d]/20">
                             {tech}
                         </span>
                     ))}
                 </div>
-                <div className="flex items-center gap-4">
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate-200 hover:text-[#00ff9d] transition-colors duration-300 bg-white/5 hover:bg-[#00ff9d]/10 px-5 py-2 rounded-full border border-white/10">
-                        <i className="fab fa-github"></i> GitHub Repo
+                <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate-200 hover:text-[#00ff9d] transition-colors duration-300 bg-white/5 hover:bg-[#00ff9d]/10 px-5 py-2 rounded-full border border-white/10">
+                    <i className="fab fa-github"></i> GitHub Repo
+                </a>
+                {project.liveUrl && (
+                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate-200 hover:text-[#00ff9d] transition-colors duration-300 bg-white/5 hover:bg-[#00ff9d]/10 px-5 py-2 rounded-full border border-white/10">
+                        <i className="fas fa-external-link-alt"></i> Live Demo
                     </a>
-                     {project.liveUrl && project.liveUrl !== '#' && (
-                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate-200 hover:text-[#00ff9d] transition-colors duration-300 bg-white/5 hover:bg-[#00ff9d]/10 px-5 py-2 rounded-full border border-white/10">
-                            <i className="fas fa-external-link-alt"></i> Live Demo
-                        </a>
-                    )}
-                </div>
+                )}
             </div>
         </div>
     );
@@ -41,8 +39,8 @@ const Projects: React.FC = () => {
             <div className="container mx-auto px-6">
                 <SectionTitle>Featured Projects</SectionTitle>
                 <div className="grid lg:grid-cols-2 gap-10">
-                    {PROJECTS.map((project, index) => (
-                        <ProjectCard key={index} project={project} />
+                    {PROJECTS.map((project) => (
+                        <ProjectCard key={project.id} project={project} />
                     ))}
                 </div>
             </div>

@@ -1,11 +1,12 @@
 
 export interface Project {
+  id: number;
   title: string;
   subtitle: string;
   description: string;
-  tech: string[];
-  githubUrl: string;
-  liveUrl: string | null;
+  techTags: string[];
+  liveUrl?: string;
+  repoUrl: string;
 }
 
 export interface Stat {
